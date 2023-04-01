@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img1 {
+    z-index: -1;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+
+}
+.fighter {
+    position: relative;
+    border-radius: 90px;
+    margin-top: 140px;
+    bottom: 0;
+    animation: rocket-animation 2s ease-in-out infinite;
+}
+@keyframes rocket-animation {
+    0% {
+       transform: translateY(0);
+    }
+    50% {
+       transform: translateY(-20px);
+    }
+    100% {
+       transform: translateY(0);
+    }
+ }
+.missile {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: red;
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 200px;
+    opacity: 1;
+    animation: rocket-animation1 2s forwards;
+ }
+
+ .launch-missile {
+    border-radius: 200px;
+}
+
+
+ @keyframes rocket-animation1 {
+ to {
+    opacity: 0;
+ }
+   
+ }
+ .station {
+    position: absolute;
+    margin-top: 60px;
+    border-radius: 200px;
+    z-index: 1;
+    left: 50%;
+    opacity: 0;
+    animation: fade-out 10s forwards;
+ }
+ .station1 {
+    position: absolute;
+    margin-top: 300px;
+    border-radius: 200px;
+    z-index: 1;
+    left: 35%;
+    opacity: 0;
+    animation: fade-in 3s forwards;
+    transform: rotate(-20deg);
+ }
+ @keyframes fade-out {
+    50% {
+      opacity: 1;
+    }
+  }
+ 
+  @keyframes fade-in {
+    50% {
+      opacity: 1;
+    }
+  }
+  .station2 {
+    position: absolute;
+    width: 400px;
+    margin-top: 60px;
+    z-index: 1;
+    left: 50%;
+    opacity: 0;
+    animation: blast 10s forwards
+ }
+ @keyframes blast {
+    50% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  .main {
+    opacity: 1;
+    animation: blank 30s forwards;
+  }
+  @keyframes blank {
+    to {
+        opacity: 0;
+    }
+  }
+  h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+   font-size: 70px;
+   background: linear-gradient(to right, 
+   #ff758c 0%, #ff7eb3 10%, #ff7eeb 20%, #c77dff 30%, 
+   #4e45ff 40%, #4e97ff 50%, #4eebff 60%, #5cff7e 70%, 
+   #c2ff4d 80%, #ffea4d 90%, #ff9f4d 100%);
+ background-clip: text;
+ -webkit-background-clip: text;
+ color: transparent;
+ animation: wave 1s linear infinite;
+ opacity: 0;
+ animation: fade 20s backwards ease-in-out;
+
+  }
+  @keyframes wave {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.25em);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade {
+    to {
+      opacity: 1;
+    }
+  }
+ 
+
+ 
