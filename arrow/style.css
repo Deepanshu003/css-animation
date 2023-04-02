@@ -1,0 +1,93 @@
+#arrow {
+    position: absolute;
+    margin-bottom: 600px;
+        bottom: 0;
+        left: 50%;
+        transform: translateY(50%);
+        border-radius: 900px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: move-up 2s ease-in-out forwards;
+      }
+      @keyframes move-up {
+        from {
+          left: 50px;
+        }
+        to {
+          right: 500px;
+        }
+      }
+#arow2 {
+    position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateY(50%);
+        border-radius: 900px;
+        margin-bottom: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: move-up 5s ease-in-out forwards;
+      }
+      @keyframes move-up {
+        from {
+          left: 50px;
+        }
+        to {
+          right: 500px;
+        }
+      }
+      
+
+#target {
+    position: absolute;
+    left: 80%;
+    font-size: 50px;
+    margin-top: 10px;
+}
+#target1 {
+    position: absolute;
+    left: 80%;
+    font-size: 50px;
+    margin-top: 470px;
+}
+#target2 {
+    position: absolute;
+    left: 80%;
+    font-size: 50px;
+    margin-top: 500px;
+}
+.main {
+    opacity: 1;
+    animation: fade-out 10s forwards ease-in-out;
+}
+@keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+  .SUCCESS {
+    position: absolute;
+    left: 30%;
+    margin-top: 150px;
+    font-size: 150px;
+    font-weight: bold;
+    color: #1d1c1c;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px yellow, 0 0 70px yellow, 0 0 80px yellow, 0 0 100px yellow, 0 0 150px yellow;
+    opacity: 0;
+    animation: fade 20s backwards ease-in-out;
+  }
+  
+  @keyframes fade {
+    /* 0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px yellow, 0 0 70px yellow, 0 0 80px yellow, 0 0 100px yellow, 0 0 150px yellow;
+    } */
+    0% {
+      text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px yellow, 0 0 80px yellow, 0 0 90px yellow, 0 0 110px yellow, 0 0 160px yellow;
+    }
+  }
+  @keyframes fade {
+    to {
+      opacity: 1;
+    }
+  }
+  
