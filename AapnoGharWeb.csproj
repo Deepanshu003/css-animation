@@ -1,0 +1,2577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02440764-4422-4E47-94C0-3E7B5711ED6B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AapnoGharWeb</RootNamespace>
+    <AssemblyName>AapnoGharWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="MCPG.CCA.Util, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3d7072b2634875da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MCPG.CCA.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AapnoGharAdmin\AddUpdCMSData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdEatAndDrinkData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdJobCategory.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdPhotoCategory.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdPhotoData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdVideoData.aspx" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_about\sponsors\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\aspx\config.ascx.bak" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\cf5_connector.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\cf5_upload.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\cf_basexml.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\cf_commands.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\cf_connector.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\cf_io.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\cf_upload.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\cf_util.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\config.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\connector.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\image.cfc" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\ImageObject.cfc" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\cfm\upload.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\lasso\config.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\lasso\connector.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\lasso\upload.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\perl\basexml.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\perl\commands.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\perl\config.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\perl\connector.cgi" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\perl\io.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\perl\upload.cgi" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\perl\upload_fck.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\perl\util.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\config.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\connector.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\fckcommands.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\fckconnector.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\fckoutput.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\fckutil.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\upload.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\wsgi.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\zope.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\userfiles\image\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor.afp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor.cfc" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_about\sponsors\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\aspx\config.ascx.bak" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\cf5_connector.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\cf5_upload.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\cf_basexml.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\cf_commands.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\cf_connector.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\cf_io.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\cf_upload.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\cf_util.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\config.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\connector.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\image.cfc" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\ImageObject.cfc" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\cfm\upload.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\lasso\config.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\lasso\connector.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\lasso\upload.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\perl\basexml.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\perl\commands.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\perl\config.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\perl\connector.cgi" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\perl\io.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\perl\upload.cgi" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\perl\upload_fck.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\perl\util.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\config.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\connector.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\fckcommands.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\fckconnector.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\fckoutput.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\fckutil.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\upload.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\wsgi.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\zope.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\userfiles\image\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor.afp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor.cfc" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor.pl" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckutils.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckutils.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\adobeair\package.bat" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\adobeair\run.bat" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\adobeair\sample01_cert.pfx" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\afp\fck.afpa" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\afp\fck.afpa.code" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\afp\sample01.afp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\afp\sample02.afp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\afp\sample03.afp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\afp\sample04.afp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\afp\sampleposteddata.afp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\cfm\sample01.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\cfm\sample01_mx.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\cfm\sample02.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\cfm\sample02_mx.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\cfm\sample03.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\cfm\sample03_mx.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\cfm\sample04.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\cfm\sample04_mx.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\cfm\sampleposteddata.cfm" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\assets\sample16.fla" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\lasso\sample01.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\lasso\sample02.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\lasso\sample03.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\lasso\sample04.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\lasso\sampleposteddata.lasso" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\perl\sample01.cgi" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\perl\sample02.cgi" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\perl\sample03.cgi" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\perl\sample04.cgi" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\perl\sampleposteddata.cgi" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\py\sample01.py" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\py\sampleposteddata.py" />
+    <Content Include="AapnoGharAdmin\fonts\fontawesome-webfontba72%281%29.eot" />
+    <Content Include="AapnoGharAdmin\fonts\fontawesome-webfontba72.eot" />
+    <Content Include="AapnoGharAdmin\fonts\fontawesome-webfontba72.ttf" />
+    <Content Include="AapnoGharAdmin\fonts\fontawesome-webfontba72.woff" />
+    <Content Include="AapnoGharAdmin\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="AapnoGharAdmin\font\P22JohnstonUnderground.eot" />
+    <Content Include="AapnoGharAdmin\font\P22JohnstonUnderground.otf" />
+    <Content Include="AapnoGharAdmin\font\P22JohnstonUnderground.ttf" />
+    <Content Include="AapnoGharAdmin\font\P22JohnstonUnderground.woff" />
+    <Content Include="AapnoGharAdmin\font\P22JohnstonUnderground.woff2" />
+    <Content Include="AapnoGharAdmin\font\ufontscomfutura-bk-bt-book.eot" />
+    <Content Include="AapnoGharAdmin\font\ufontscomfutura-bk-bt-book.otf" />
+    <Content Include="AapnoGharAdmin\font\ufontscomfutura-bk-bt-book.ttf" />
+    <Content Include="AapnoGharAdmin\font\ufontscomfutura-bk-bt-book.woff" />
+    <Content Include="AapnoGharAdmin\font\ufontscomfutura-bk-bt-book.woff2" />
+    <Content Include="AapnoGharAdmin\HelloWorld\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\icons\Thumbs.db" />
+    <Content Include="AapnoGharAdmin\ManageCareer.aspx" />
+    <Content Include="AapnoGharAdmin\ManageCMSData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageCMSEnquiryData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageCMSGalleryData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageEatAndDrinkData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageEatAndDrinkEnquiryData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageEatAndDrinkGalleryData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageJobCategory.aspx" />
+    <Content Include="AapnoGharAdmin\ManagePhotoCategory.aspx" />
+    <Content Include="AapnoGharAdmin\ManagePhotoData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageVideoData.aspx" />
+    <Content Include="AapnoGharService.asmx" />
+    <Content Include="AapnoGhar_Html\assets\font\justanotherhand-regular-webfont.woff" />
+    <Content Include="AapnoGhar_Html\assets\font\justanotherhand-regular-webfont.woff2" />
+    <Content Include="AapnoGhar_Html\assets\font\mikado-bold-webfont.woff" />
+    <Content Include="AapnoGhar_Html\assets\font\mikado-bold-webfont.woff2" />
+    <Content Include="AapnoGhar_Html\assets\font\mikado-medium-webfont.woff" />
+    <Content Include="AapnoGhar_Html\assets\font\mikado-medium-webfont.woff2" />
+    <Content Include="AapnoGhar_Html\assets\sass\about\_about.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\amusement-park\_amusement.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\amusement-park\_Popup_Book_Park.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\Blogs\_blog-detail.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\Blogs\_blog.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\career\_career.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\ceremony\_ceremony.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\contact\_contact.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\Coupon\_coupon.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\dashboard\_dashboard-rooms-suits.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\dashboard\_dashboard.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\dashboard\_dashboard_member_plans.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\dashboard\_events_packages.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\dashboard\_persional_info.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\dashboard\_sideBar.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\footer\_footer.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\gallery\_gallery.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\header\_header.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\home\_home.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\message\_message.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\ModelPop\_pop.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\pakages\_pakage.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\room\_book_room.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\room\_details.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\room\_listing.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\signup_login\_signup_login.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\style.css.map" />
+    <Content Include="AapnoGhar_Html\assets\sass\style.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\_common.sass" />
+    <Content Include="AapnoGhar_Html\assets\sass\_var.sass" />
+    <Content Include="AapnoGharWebMaster.Master" />
+    <Content Include="assets\font\justanotherhand-regular-webfont.woff" />
+    <Content Include="assets\font\justanotherhand-regular-webfont.woff2" />
+    <Content Include="assets\font\mikado-bold-webfont.woff" />
+    <Content Include="assets\font\mikado-bold-webfont.woff2" />
+    <Content Include="assets\font\mikado-medium-webfont.woff" />
+    <Content Include="assets\font\mikado-medium-webfont.woff2" />
+    <Content Include="assets\icons\shopping-cart.png" />
+    <Content Include="assets\images\Not-found.gif" />
+    <Content Include="assets\js\jquery.da-share.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\roomHandler.js" />
+    <Content Include="assets\js\Validation.js" />
+    <Content Include="assets\sass\about\_about.sass" />
+    <Content Include="assets\sass\amusement-park\_amusement.sass" />
+    <Content Include="assets\sass\amusement-park\_Popup_Book_Park.sass" />
+    <Content Include="assets\sass\Blogs\_blog-detail.sass" />
+    <Content Include="assets\sass\Blogs\_blog.sass" />
+    <Content Include="assets\sass\career\_career.sass" />
+    <Content Include="assets\sass\ceremony\_ceremony.sass" />
+    <Content Include="assets\sass\contact\_contact.sass" />
+    <Content Include="assets\sass\Coupon\_coupon.sass" />
+    <Content Include="assets\sass\dashboard\_dashboard-rooms-suits.sass" />
+    <Content Include="assets\sass\dashboard\_dashboard.sass" />
+    <Content Include="assets\sass\dashboard\_dashboard_member_plans.sass" />
+    <Content Include="assets\sass\dashboard\_events_packages.sass" />
+    <Content Include="assets\sass\dashboard\_persional_info.sass" />
+    <Content Include="assets\sass\dashboard\_sideBar.sass" />
+    <Content Include="assets\sass\footer\_footer.sass" />
+    <Content Include="assets\sass\gallery\_gallery.sass" />
+    <Content Include="assets\sass\header\_header.sass" />
+    <Content Include="assets\sass\home\_home.sass" />
+    <Content Include="assets\sass\message\_message.sass" />
+    <Content Include="assets\sass\ModelPop\_pop.sass" />
+    <Content Include="assets\sass\pakages\_pakage.sass" />
+    <Content Include="assets\sass\room\_book_room.sass" />
+    <Content Include="assets\sass\room\_details.sass" />
+    <Content Include="assets\sass\room\_listing.sass" />
+    <Content Include="assets\sass\signup_login\_signup_login.sass" />
+    <Content Include="assets\sass\style.css.map" />
+    <Content Include="assets\sass\style.sass" />
+    <Content Include="assets\sass\_common.sass" />
+    <Content Include="assets\sass\_var.sass" />
+    <None Include="Properties\PublishProfiles\AapnoGhar.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AapnoGharAdmin\AddUpdAmenities.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdBlogCategory.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdBlogData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdCouponsData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdCustomer.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdEntertainmentActivityData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdEntertainmentData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdEntertainmentMealData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdFestivalChargesData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdPackage.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdRoomData.aspx" />
+    <Content Include="AapnoGharAdmin\AddUpdWeddeingEventData.aspx" />
+    <Content Include="AapnoGharAdmin\ChangePassword.aspx" />
+    <Content Include="AapnoGharAdmin\css\bootstrap.css" />
+    <Content Include="AapnoGharAdmin\css\custom-styles.css" />
+    <Content Include="AapnoGharAdmin\css\font-awesome.css" />
+    <Content Include="AapnoGharAdmin\css\morris-0.4.3.min.css" />
+    <Content Include="AapnoGharAdmin\Datetime\jquery-1.7.2.min.js" />
+    <Content Include="AapnoGharAdmin\Datetime\jquery-ui-1.8.19.custom.css" />
+    <Content Include="AapnoGharAdmin\Datetime\jquery-ui-1.8.19.custom.min.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\behaviors\disablehandles.htc" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\behaviors\showtableborders.htc" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\fck_editorarea.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\fck_internal.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\fck_showtableborders_gecko.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_address.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_blockquote.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_div.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_h1.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_h2.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_h3.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_h4.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_h5.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_h6.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_p.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\block_pre.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\fck_anchor.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\fck_flashlogo.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\fck_hiddenfield.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\fck_pagebreak.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\css\images\fck_plugin.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\common\fck_dialog_common.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\common\fck_dialog_common.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\common\images\locked.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\common\images\reset.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\common\images\unlocked.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_about.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_about\logo_fckeditor.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_about\logo_fredck.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_about\sponsors\spellchecker_net.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_anchor.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_button.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_checkbox.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_colorselector.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_div.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_docprops.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_docprops\fck_document_preview.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_flash.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_flash\fck_flash.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_flash\fck_flash_preview.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_form.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_hiddenfield.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_image.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_image\fck_image.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_image\fck_image_preview.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_link.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_link\fck_link.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_listprop.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_paste.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_radiobutton.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_replace.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_select.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_select\fck_select.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_smiley.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_source.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_specialchar.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\blank.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\controls.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\controlWindow.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellchecker.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellChecker.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellerStyle.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_spellerpages\spellerpages\wordWindow.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_table.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_tablecell.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_template.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_template\images\template1.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_template\images\template2.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_template\images\template3.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_textarea.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dialog\fck_textfield.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dtd\fck_dtd_test.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dtd\fck_xhtml10strict.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\dtd\fck_xhtml10transitional.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\fckdebug.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\fckdialog.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\fckeditor.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\fckeditor.original.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\browser.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\browser.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\frmactualfolder.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\frmcreatefolder.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\frmfolders.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\frmresourceslist.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\frmresourcetype.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\frmupload.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\ButtonArrow.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\Folder.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\Folder32.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\FolderOpened.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\FolderOpened32.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\FolderUp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\ai.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\avi.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\bmp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\cs.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\default.icon.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\dll.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\doc.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\exe.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\fla.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\gif.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\htm.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\html.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\jpg.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\js.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\mdb.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\mp3.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\pdf.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\png.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\ppt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\rdp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\swf.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\swt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\txt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\vsd.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\xls.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\xml.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\32\zip.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\ai.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\avi.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\bmp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\cs.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\default.icon.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\dll.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\doc.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\exe.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\fla.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\gif.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\htm.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\html.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\jpg.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\js.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\mdb.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\mp3.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\pdf.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\png.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\ppt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\rdp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\swf.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\swt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\txt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\vsd.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\xls.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\xml.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\icons\zip.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\images\spacer.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\js\common.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\browser\default\js\fckxml.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\aspx\config.ascx" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\aspx\connector.aspx" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\aspx\upload.aspx" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\asp\basexml.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\asp\class_upload.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\asp\commands.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\asp\config.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\asp\connector.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\asp\io.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\asp\upload.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\asp\util.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\php\basexml.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\php\commands.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\php\config.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\php\connector.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\php\io.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\php\phpcompat.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\php\upload.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\php\util.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\py\htaccess.txt" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\test.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\uploadtest.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\userfiles\image\14.jpg" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\filemanager\connectors\userfiles\image\Page20.jpg" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\anchor.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\arrow_ltr.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\arrow_rtl.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\angel_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\angry_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\broken_heart.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\cake.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\confused_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\cry_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\devil_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\embaressed_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\envelope.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\heart.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\kiss.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\lightbulb.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\omg_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\regular_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\sad_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\shades_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\teeth_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\thumbs_down.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\thumbs_up.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\tounge_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\whatchutalkingabout_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\smiley\msn\wink_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\images\spacer.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\js\fckadobeair.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\js\fckeditorcode_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\js\fckeditorcode_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\af.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\ar.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\bg.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\bn.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\bs.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\ca.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\cs.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\da.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\de.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\el.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\en-au.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\en-ca.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\en-uk.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\en.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\eo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\es.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\et.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\eu.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\fa.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\fi.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\fo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\fr-ca.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\fr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\gl.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\gu.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\he.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\hi.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\hr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\hu.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\is.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\it.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\ja.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\km.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\ko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\lt.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\lv.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\mn.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\ms.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\nb.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\nl.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\no.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\pl.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\pt-br.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\pt.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\ro.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\ru.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\sk.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\sl.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\sr-latn.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\sr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\sv.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\th.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\tr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\uk.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\vi.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\zh-cn.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\zh.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\lang\_translationstatus.txt" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\autogrow\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\bbcode\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\bbcode\_sample\sample.config.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\bbcode\_sample\sample.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\dragresizetable\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\placeholder\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\placeholder\fck_placeholder.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\placeholder\lang\de.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\placeholder\lang\en.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\placeholder\lang\es.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\placeholder\lang\fr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\placeholder\lang\it.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\placeholder\lang\pl.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\placeholder\placeholder.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\simplecommands\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\plugins\tablecommands\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\fck_dialog.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\fck_dialog_ie6.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\fck_editor.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\fck_strip.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\dialog.sides.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\dialog.sides.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\dialog.sides.rtl.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\sprites.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\sprites.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\toolbar.arrowright.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\toolbar.buttonarrow.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\toolbar.collapse.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\toolbar.end.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\toolbar.expand.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\toolbar.separator.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\default\images\toolbar.start.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\fck_dialog.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\fck_dialog_ie6.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\fck_editor.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\fck_strip.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\dialog.sides.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\dialog.sides.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\dialog.sides.rtl.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\sprites.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\sprites.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\toolbar.arrowright.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\toolbar.bg.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\toolbar.buttonarrow.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\toolbar.collapse.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\toolbar.end.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\toolbar.expand.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\toolbar.separator.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\office2003\images\toolbar.start.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\fck_dialog.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\fck_dialog_ie6.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\fck_editor.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\fck_strip.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\dialog.sides.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\dialog.sides.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\dialog.sides.rtl.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\sprites.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\sprites.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\toolbar.arrowright.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\toolbar.buttonarrow.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\toolbar.buttonbg.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\toolbar.collapse.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\toolbar.end.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\toolbar.expand.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\toolbar.separator.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\silver\images\toolbar.start.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\skins\_fckviewstrips.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\wsc\ciframe.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\wsc\tmpFrameset.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\wsc\w.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckcontextmenu.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckdataprocessor.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckdocumentfragment_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckdocumentfragment_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckdomrange.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckdomrangeiterator.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckdomrange_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckdomrange_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckeditingarea.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckelementpath.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckenterkey.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckevents.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckhtmliterator.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckicon.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckiecleanup.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckimagepreloader.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckkeystrokehandler.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckmenublock.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckmenublockpanel.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckmenuitem.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckpanel.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckspecialcombo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckstyle.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbar.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarbreak_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarbreak_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarbutton.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarbuttonui.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarfontformatcombo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarfontscombo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarfontsizecombo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarpanelbutton.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarspecialcombo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fcktoolbarstylecombo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckw3crange.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckxml.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckxml_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\classes\fckxml_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckblockquotecommand.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckcorestylecommand.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckfitwindow.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckindentcommands.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckjustifycommands.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fcklistcommands.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fcknamedcommand.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckpasteplaintextcommand.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckpastewordcommand.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckremoveformatcommand.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckshowblocks.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckspellcheckcommand_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckspellcheckcommand_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fckstylecommand.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fcktablecommand.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fcktextcolorcommand.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\commandclasses\fck_othercommands.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\fckconstants.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\fckeditorapi.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\fckjscoreextensions.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\fckscriptloader.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fck.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckbrowserinfo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckcodeformatter.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckcommands.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckconfig.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckdebug.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckdebug_empty.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckdialog.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckdocumentprocessor.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckdomtools.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcklanguagemanager.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcklisthandler.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcklistslib.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckplugins.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckregexlib.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckselection.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckselection_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckselection_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckstyles.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcktablehandler.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcktablehandler_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcktablehandler_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcktoolbaritems.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcktoolbarset.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcktools.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcktools_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fcktools_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckundo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckurlparams.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckxhtml.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckxhtmlentities.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckxhtml_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fckxhtml_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fck_contextmenu.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fck_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\editor\_source\internals\fck_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckconfig.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\behaviors\disablehandles.htc" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\behaviors\showtableborders.htc" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\fck_editorarea.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\fck_internal.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\fck_showtableborders_gecko.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_address.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_blockquote.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_div.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_h1.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_h2.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_h3.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_h4.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_h5.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_h6.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_p.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\block_pre.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\fck_anchor.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\fck_flashlogo.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\fck_hiddenfield.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\fck_pagebreak.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\css\images\fck_plugin.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\common\fck_dialog_common.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\common\fck_dialog_common.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\common\images\locked.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\common\images\reset.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\common\images\unlocked.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_about.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_about\logo_fckeditor.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_about\logo_fredck.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_about\sponsors\spellchecker_net.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_anchor.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_button.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_checkbox.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_colorselector.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_div.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_docprops.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_docprops\fck_document_preview.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_flash.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_flash\fck_flash.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_flash\fck_flash_preview.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_form.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_hiddenfield.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_image.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_image\fck_image.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_image\fck_image_preview.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_link.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_link\fck_link.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_listprop.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_paste.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_radiobutton.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_replace.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_select.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_select\fck_select.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_smiley.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_source.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_specialchar.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages\spellerpages\blank.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages\spellerpages\controlWindow.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellchecker.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellChecker.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellerStyle.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_spellerpages\spellerpages\wordWindow.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_table.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_tablecell.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_template.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_template\images\template1.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_template\images\template2.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_template\images\template3.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_textarea.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dialog\fck_textfield.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dtd\fck_dtd_test.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dtd\fck_xhtml10strict.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\dtd\fck_xhtml10transitional.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\fckdebug.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\fckdialog.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\fckeditor.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\fckeditor.original.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\browser.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\browser.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\frmactualfolder.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\frmcreatefolder.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\frmfolders.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\frmresourceslist.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\frmresourcetype.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\frmupload.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\ButtonArrow.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\Folder.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\Folder32.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\FolderOpened.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\FolderOpened32.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\FolderUp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\ai.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\avi.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\bmp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\cs.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\default.icon.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\dll.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\doc.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\exe.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\fla.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\gif.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\htm.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\html.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\jpg.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\js.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\mdb.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\mp3.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\pdf.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\png.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\ppt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\rdp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\swf.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\swt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\txt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\vsd.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\xls.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\xml.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\32\zip.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\ai.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\avi.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\bmp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\cs.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\default.icon.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\dll.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\doc.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\exe.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\fla.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\gif.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\htm.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\html.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\jpg.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\js.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\mdb.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\mp3.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\pdf.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\png.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\ppt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\rdp.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\swf.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\swt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\txt.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\vsd.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\xls.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\xml.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\icons\zip.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\images\spacer.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\js\common.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\browser\default\js\fckxml.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\aspx\config.ascx" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\aspx\connector.aspx" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\aspx\upload.aspx" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\asp\basexml.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\asp\class_upload.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\asp\commands.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\asp\config.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\asp\connector.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\asp\io.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\asp\upload.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\asp\util.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\php\basexml.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\php\commands.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\php\config.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\php\connector.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\php\io.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\php\phpcompat.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\php\upload.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\php\util.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\py\htaccess.txt" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\test.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\uploadtest.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\userfiles\image\14.jpg" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\filemanager\connectors\userfiles\image\Page20.jpg" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\anchor.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\arrow_ltr.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\arrow_rtl.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\angel_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\angry_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\broken_heart.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\cake.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\confused_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\cry_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\devil_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\embaressed_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\envelope.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\heart.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\kiss.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\lightbulb.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\omg_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\regular_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\sad_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\shades_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\teeth_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\thumbs_down.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\thumbs_up.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\tounge_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\whatchutalkingabout_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\smiley\msn\wink_smile.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\images\spacer.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\js\fckadobeair.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\js\fckeditorcode_gecko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\js\fckeditorcode_ie.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\af.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\ar.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\bg.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\bn.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\bs.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\ca.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\cs.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\da.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\de.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\el.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\en-au.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\en-ca.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\en-uk.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\en.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\eo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\es.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\et.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\eu.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\fa.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\fi.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\fo.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\fr-ca.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\fr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\gl.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\gu.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\he.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\hi.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\hr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\hu.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\is.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\it.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\ja.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\km.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\ko.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\lt.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\lv.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\mn.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\ms.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\nb.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\nl.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\no.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\pl.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\pt-br.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\pt.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\ro.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\ru.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\sk.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\sl.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\sr-latn.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\sr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\sv.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\th.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\tr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\uk.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\vi.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\zh-cn.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\zh.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\lang\_translationstatus.txt" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\plugins\autogrow\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\plugins\bbcode\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\plugins\bbcode\_sample\sample.config.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\plugins\bbcode\_sample\sample.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\plugins\dragresizetable\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\plugins\placeholder\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\plugins\placeholder\fck_placeholder.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\plugins\placeholder\lang\de.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\editor\plugins\placeholder\placeholder.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckconfig.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor_php4.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckeditor_php5.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckpackager.xml" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fckstyles.xml" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\fcktemplates.xml" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\license.txt" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\_documentation.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\_upgrade.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\_whatsnew.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor\_whatsnew_history.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor_php4.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckeditor_php5.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckpackager.xml" />
+    <Content Include="AapnoGharAdmin\fckeditor\fckstyles.xml" />
+    <Content Include="AapnoGharAdmin\fckeditor\fcktemplates.xml" />
+    <Content Include="AapnoGharAdmin\fckeditor\license.txt" />
+    <Content Include="AapnoGharAdmin\fckeditor\_documentation.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\adobeair\application.xml" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\adobeair\icons\128.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\adobeair\icons\16.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\adobeair\icons\32.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\adobeair\icons\48.png" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\adobeair\sample01.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\asp\sample01.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\asp\sample02.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\asp\sample03.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\asp\sample04.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\asp\sampleposteddata.asp" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\default.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\assets\sample06.config.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\assets\sample11_frame.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\assets\sample14.config.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\assets\sample14.styles.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\assets\sample15.config.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\assets\sample16.config.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\assets\sample16.swf" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\assets\swfobject.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample01.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample02.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample03.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample04.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample05.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample06.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample07.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample08.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample09.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample10.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample11.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample12.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample13.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample14.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample15.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\html\sample16.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\php\sample01.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\php\sample02.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\php\sample03.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\php\sample04.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\php\sampleposteddata.php" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\sample.css" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\sampleslist.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\_plugins\findreplace\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\_plugins\findreplace\find.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\_plugins\findreplace\find.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\_plugins\findreplace\lang\en.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\_plugins\findreplace\lang\fr.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\_plugins\findreplace\lang\it.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\_plugins\findreplace\replace.gif" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\_plugins\findreplace\replace.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_samples\_plugins\samples\fckplugin.js" />
+    <Content Include="AapnoGharAdmin\fckeditor\_upgrade.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_whatsnew.html" />
+    <Content Include="AapnoGharAdmin\fckeditor\_whatsnew_history.html" />
+    <Content Include="AapnoGharAdmin\fonts\font-awesome.css" />
+    <Content Include="AapnoGharAdmin\fonts\fontawesome-webfontba72.svg" />
+    <Content Include="AapnoGharAdmin\font\P22JohnstonUnderground.svg" />
+    <Content Include="AapnoGharAdmin\font\ufontscomfutura-bk-bt-book.svg" />
+    <Content Include="AapnoGharAdmin\Footer.ascx" />
+    <Content Include="AapnoGharAdmin\Header.ascx" />
+    <Content Include="AapnoGharAdmin\HeaderRight.ascx" />
+    <Content Include="AapnoGharAdmin\HelloWorld\agenda.js" />
+    <Content Include="AapnoGharAdmin\HelloWorld\calbtn.gif" />
+    <Content Include="AapnoGharAdmin\HelloWorld\ipopeng.htm" />
+    <Content Include="AapnoGharAdmin\HelloWorld\jquery-1.10.2.js" />
+    <Content Include="AapnoGharAdmin\HelloWorld\jquery-ui.css" />
+    <Content Include="AapnoGharAdmin\HelloWorld\js\jquery-1.10.2.js" />
+    <Content Include="AapnoGharAdmin\HelloWorld\js\jquery-ui.css" />
+    <Content Include="AapnoGharAdmin\HelloWorld\js\jquery-ui.js" />
+    <Content Include="AapnoGharAdmin\HelloWorld\normal.css" />
+    <Content Include="AapnoGharAdmin\HelloWorld\normal.js" />
+    <Content Include="AapnoGharAdmin\HelloWorld\plugins.js" />
+    <Content Include="AapnoGharAdmin\HelloWorld\_hcc_thumbs\calbtn.gif-thumb-80.gif" />
+    <Content Include="AapnoGharAdmin\Home.aspx" />
+    <Content Include="AapnoGharAdmin\icons\backcolor.gif" />
+    <Content Include="AapnoGharAdmin\icons\backcolor_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\background_silver.jpg" />
+    <Content Include="AapnoGharAdmin\icons\bold.gif" />
+    <Content Include="AapnoGharAdmin\icons\bold_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\copy.gif" />
+    <Content Include="AapnoGharAdmin\icons\copy_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\cut.gif" />
+    <Content Include="AapnoGharAdmin\icons\cut_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\forecolor.gif" />
+    <Content Include="AapnoGharAdmin\icons\forecolor_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\help.gif" />
+    <Content Include="AapnoGharAdmin\icons\help_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\indent_left.gif" />
+    <Content Include="AapnoGharAdmin\icons\indent_left_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\indent_right.gif" />
+    <Content Include="AapnoGharAdmin\icons\indent_right_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\insert_hyperlink.gif" />
+    <Content Include="AapnoGharAdmin\icons\insert_hyperlink_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\insert_picture.gif" />
+    <Content Include="AapnoGharAdmin\icons\insert_picture_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\insert_table.gif" />
+    <Content Include="AapnoGharAdmin\icons\insert_table_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\italics.gif" />
+    <Content Include="AapnoGharAdmin\icons\italics_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\justify_center.gif" />
+    <Content Include="AapnoGharAdmin\icons\justify_center_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\justify_left.gif" />
+    <Content Include="AapnoGharAdmin\icons\justify_left_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\justify_right.gif" />
+    <Content Include="AapnoGharAdmin\icons\justify_right_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\list_ordered.gif" />
+    <Content Include="AapnoGharAdmin\icons\list_ordered_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\list_unordered.gif" />
+    <Content Include="AapnoGharAdmin\icons\list_unordered_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\logo.gif" />
+    <Content Include="AapnoGharAdmin\icons\paste.gif" />
+    <Content Include="AapnoGharAdmin\icons\paste_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\redo.gif" />
+    <Content Include="AapnoGharAdmin\icons\redo_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\select_font.gif" />
+    <Content Include="AapnoGharAdmin\icons\select_font_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\select_size.gif" />
+    <Content Include="AapnoGharAdmin\icons\select_size_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\seperator.gif" />
+    <Content Include="AapnoGharAdmin\icons\seperator2.gif" />
+    <Content Include="AapnoGharAdmin\icons\strikethrough.gif" />
+    <Content Include="AapnoGharAdmin\icons\strikethrough_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\subscript.gif" />
+    <Content Include="AapnoGharAdmin\icons\subscript_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\superscript.gif" />
+    <Content Include="AapnoGharAdmin\icons\superscript_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\underline.gif" />
+    <Content Include="AapnoGharAdmin\icons\underline_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\undo.gif" />
+    <Content Include="AapnoGharAdmin\icons\undo_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\view_source.gif" />
+    <Content Include="AapnoGharAdmin\icons\view_source_on.gif" />
+    <Content Include="AapnoGharAdmin\icons\view_text.gif" />
+    <Content Include="AapnoGharAdmin\icons\view_text_on.gif" />
+    <Content Include="AapnoGharAdmin\images\01.png" />
+    <Content Include="AapnoGharAdmin\images\02.png" />
+    <Content Include="AapnoGharAdmin\images\03.png" />
+    <Content Include="AapnoGharAdmin\images\04.png" />
+    <Content Include="AapnoGharAdmin\images\05.png" />
+    <Content Include="AapnoGharAdmin\images\06.png" />
+    <Content Include="AapnoGharAdmin\images\5.jpg" />
+    <Content Include="AapnoGharAdmin\images\barcode.png" />
+    <Content Include="AapnoGharAdmin\images\bg.jpg" />
+    <Content Include="AapnoGharAdmin\images\blogs.jpg" />
+    <Content Include="AapnoGharAdmin\images\calbtn.gif" />
+    <Content Include="AapnoGharAdmin\images\calender.png" />
+    <Content Include="AapnoGharAdmin\images\call-answer.png" />
+    <Content Include="AapnoGharAdmin\images\cateservice.png" />
+    <Content Include="AapnoGharAdmin\images\colorvariants.png" />
+    <Content Include="AapnoGharAdmin\images\delete.jpg" />
+    <Content Include="AapnoGharAdmin\images\Doctor.jpg" />
+    <Content Include="AapnoGharAdmin\images\download.jpg" />
+    <Content Include="AapnoGharAdmin\images\edit.jpg" />
+    <Content Include="AapnoGharAdmin\images\envelope.png" />
+    <Content Include="AapnoGharAdmin\images\favicon.png" />
+    <Content Include="AapnoGharAdmin\images\Field.jpg" />
+    <Content Include="AapnoGharAdmin\images\loading.gif" />
+    <Content Include="AapnoGharAdmin\images\login-sprite.png" />
+    <Content Include="AapnoGharAdmin\images\logo.png" />
+    <Content Include="AapnoGharAdmin\images\logout.png" />
+    <Content Include="AapnoGharAdmin\images\ox.png" />
+    <Content Include="AapnoGharAdmin\images\prnt.png" />
+    <Content Include="AapnoGharAdmin\images\products-icon.png" />
+    <Content Include="AapnoGharAdmin\images\question.png" />
+    <Content Include="AapnoGharAdmin\images\room.jpg" />
+    <Content Include="AapnoGharAdmin\images\service-icon-data.png" />
+    <Content Include="AapnoGharAdmin\images\service-icon.png" />
+    <Content Include="AapnoGharAdmin\images\settings.png" />
+    <Content Include="AapnoGharAdmin\images\specility.png" />
+    <Content Include="AapnoGharAdmin\images\stockS.png" />
+    <Content Include="AapnoGharAdmin\images\ttlusers.png" />
+    <Content Include="AapnoGharAdmin\images\user.png" />
+    <Content Include="AapnoGharAdmin\images\view.gif" />
+    <Content Include="AapnoGharAdmin\images\watermark.png" />
+    <Content Include="AapnoGharAdmin\index.aspx" />
+    <Content Include="AapnoGharAdmin\Javascript\asdropdowntreeview\dropdowntreeview.css" />
+    <Content Include="AapnoGharAdmin\Javascript\asdropdowntreeview\images\windropdown-disabled.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\asdropdowntreeview\images\windropdown.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\astreeview.css" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\astreeview_packed.js" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-bottom-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-checkbox-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-folder-open.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-folder.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-li-bg.jpg" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-middle-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-minus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-node.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-plus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-root-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-top-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\images\astreeview-vertical-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\default.css" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-bottom-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-checkbox-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-folder-open.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-folder.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-middle-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-minus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-node.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-plus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-root-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-top-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\default\images\astreeview-vertical-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-bottom-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-checkbox-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-folder-open.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-folder.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-middle-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-minus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-node.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-plus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-root-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-top-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\images\astreeview-vertical-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\macOS\macOS.css" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-bottom-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-checkbox-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-folder-open.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-folder.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-middle-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-minus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-node.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-plus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-root-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-top-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\images\astreeview-vertical-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\right-left\right-left.css" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-bottom-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-checkbox-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-folder-open.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-folder.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-middle-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-minus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-node.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-plus.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-root-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-top-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\images\astreeview-vertical-line.gif" />
+    <Content Include="AapnoGharAdmin\Javascript\astreeview\themes\vista\vista.css" />
+    <Content Include="AapnoGharAdmin\Javascript\contextmenu\contextmenu.css" />
+    <Content Include="AapnoGharAdmin\Javascript\contextmenu\contextmenu_packed.js" />
+    <Content Include="AapnoGharAdmin\Js\bootstrap.min.js" />
+    <Content Include="AapnoGharAdmin\Js\custom-scripts.js" />
+    <Content Include="AapnoGharAdmin\Js\jquery-1.10.2.js" />
+    <None Include="AapnoGharAdmin\Js\jquery-1.4.1-vsdoc.js" />
+    <Content Include="AapnoGharAdmin\Js\jquery-1.4.1.js" />
+    <Content Include="AapnoGharAdmin\Js\jquery.metisMenu.js" />
+    <Content Include="AapnoGharAdmin\Js\morris.js" />
+    <Content Include="AapnoGharAdmin\Js\raphael-2.1.0.min.js" />
+    <Content Include="AapnoGharAdmin\Js\Validation.js" />
+    <Content Include="AapnoGharAdmin\Js\wysiwyg.js" />
+    <Content Include="AapnoGharAdmin\Logout.aspx" />
+    <Content Include="AapnoGharAdmin\ManageAmenities.aspx" />
+    <Content Include="AapnoGharAdmin\ManageBlogCategory.aspx" />
+    <Content Include="AapnoGharAdmin\ManageBlogData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageContact.aspx" />
+    <Content Include="AapnoGharAdmin\ManageCouponsData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageCustomer.aspx" />
+    <Content Include="AapnoGharAdmin\ManageEntertainmentActivityData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageEntertainmentData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageEntertainmentGalleryData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageEntertainmentMealData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageEntertainmentBookOrder.aspx" />
+    <Content Include="AapnoGharAdmin\ManageFestivalChargesData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageOrder.aspx" />
+    <Content Include="AapnoGharAdmin\ManagePackage.aspx" />
+    <Content Include="AapnoGharAdmin\ManageRoomAvailability.aspx" />
+    <Content Include="AapnoGharAdmin\ManageRoomData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageRoomGalleryData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageWeddeingEventData.aspx" />
+    <Content Include="AapnoGharAdmin\ManageWeddeingEventDataEnquiry.aspx" />
+    <Content Include="AapnoGharAdmin\ManageWeddeingEventGalleryData.aspx" />
+    <Content Include="AapnoGharAdmin\popups\about.html" />
+    <Content Include="AapnoGharAdmin\popups\about_license.html" />
+    <Content Include="AapnoGharAdmin\popups\about_license1.html" />
+    <Content Include="AapnoGharAdmin\popups\create_table.html" />
+    <Content Include="AapnoGharAdmin\popups\insert_hyperlink.aspx" />
+    <Content Include="AapnoGharAdmin\popups\insert_hyperlink.html" />
+    <Content Include="AapnoGharAdmin\popups\insert_image.aspx" />
+    <Content Include="AapnoGharAdmin\popups\insert_image.html" />
+    <Content Include="AapnoGharAdmin\popups\license.html" />
+    <Content Include="AapnoGharAdmin\popups\license1.html" />
+    <Content Include="AapnoGharAdmin\popups\select_color.html" />
+    <Content Include="AapnoGharAdmin\styles\styles.css" />
+    <Content Include="AapnoGharAdmin\ViewEntertainmentHistory.aspx" />
+    <Content Include="AapnoGharAdmin\ViewOrderHistory.aspx" />
+    <Content Include="AapnoGhar_Html\about-us.html" />
+    <Content Include="AapnoGhar_Html\amusement-park.html" />
+    <Content Include="AapnoGhar_Html\assets\css\fancy-box.css" />
+    <Content Include="AapnoGhar_Html\assets\css\jquery-ui.min.css" />
+    <Content Include="AapnoGhar_Html\assets\css\owl.carousel.min.css" />
+    <Content Include="AapnoGhar_Html\assets\font\font.css" />
+    <Content Include="AapnoGhar_Html\assets\icons\air-conditioner.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\Apnoghar_logo_text.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\attach.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\avatar.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\bathroom.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\bed.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\calendar.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\check_iocnswn.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\chec_s.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\close.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\cont_call.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\cont_msg.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\cont_wtsp.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\delete.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\donw.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\downrd.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\down_ar.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\footer_ico1.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\footer_ico2.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\footer_ico3.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\footer_ico4.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\footer_ico5.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\footer_logo.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\heading_line.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\heading_line_skyblue.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\heading_line_white.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\head_ico1.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\head_ico2.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\head_ico3.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\head_ico4.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\head_ico5.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\hrt_ico.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\joker.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\kid_ico.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\left.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\left_black.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\le_arr.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\Loader-BIG.gif" />
+    <Content Include="AapnoGhar_Html\assets\icons\Loader-BIG_.gif" />
+    <Content Include="AapnoGhar_Html\assets\icons\loc.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\logo.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\logout.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\mail.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\mic_ico.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\nextBl.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\nextBr.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\nextbro.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\nextgr.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\nextW.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\ox.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\parents_ico.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\pen.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\phone.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\play.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\prewW.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\right.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\right_black.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\select-arr.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\testi_ico.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\tik.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\tray.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\user.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\venues_ico.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\whatsapp.png" />
+    <Content Include="AapnoGhar_Html\assets\icons\wifi.png" />
+    <Content Include="AapnoGhar_Html\assets\images\about-us\banner.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\about-us\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\about-us\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\about-us\img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\about-us\img4.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\Activities\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\Activities\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\Activities\img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\bannerimg1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\bannerimg2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\bannerimg3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\food\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\More-services\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\More-services\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\More-services\img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\testimonial\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\testimonial\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\amusement-park\testimonial\img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\Blog-detail\banner.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\Blog-detail\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\Blog-detail\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\Blog-detail\IMG3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\img4.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\img5.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\img6.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\img7.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Blogs\img8.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\career\banner.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\career\culture.png" />
+    <Content Include="AapnoGhar_Html\assets\images\career\leadership.png" />
+    <Content Include="AapnoGhar_Html\assets\images\career\role.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Contact\banner.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\dashboard\banner.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\dashboard\bg1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\dashboard\events.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\dashboard\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\dashboard\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\dashboard\plans.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\dashboard\room.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\dashboard\room_thumb.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\eat-drink\1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\eat-drink\2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\eat-drink\3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\favicon.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\img1.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\img2.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\img3.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\img4.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\img5.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\img6.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\img7.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\img8.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\img9.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\slideimg1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\slideimg2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\slideimg3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Gallery\slideimg4.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\header\cele_img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\header\cele_img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\header\cele_img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\header\cele_img4.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\header\stay_img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\header\stay_img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\header\stay_img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\img4.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\seca-1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\seca-2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\seca-3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\seca-4.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\secC_banner.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\secC_ico.png" />
+    <Content Include="AapnoGhar_Html\assets\images\home\secD_img1.png" />
+    <Content Include="AapnoGhar_Html\assets\images\home\secD_img2.png" />
+    <Content Include="AapnoGhar_Html\assets\images\home\secD_img3.png" />
+    <Content Include="AapnoGhar_Html\assets\images\home\SecE-img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\SecE-img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\SecE-img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\home\testimonial\img1.png" />
+    <Content Include="AapnoGhar_Html\assets\images\home\testimonial\img2.png" />
+    <Content Include="AapnoGhar_Html\assets\images\home\testimonial\img3.png" />
+    <Content Include="AapnoGhar_Html\assets\images\home\testimonial\img4.png" />
+    <Content Include="AapnoGhar_Html\assets\images\home\testimonial\img5.png" />
+    <Content Include="AapnoGhar_Html\assets\images\home\testimonial\img6.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Mehndi-haldi\banner.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Mehndi-haldi\gallery\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Mehndi-haldi\gallery\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Mehndi-haldi\gallery\img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Mehndi-haldi\next.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Mehndi-haldi\prev.png" />
+    <Content Include="AapnoGhar_Html\assets\images\Mehndi-haldi\slideimg1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Mehndi-haldi\slideimg2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\Mehndi-haldi\slideimg3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\modelPop\fb.png" />
+    <Content Include="AapnoGhar_Html\assets\images\modelPop\ggl.png" />
+    <Content Include="AapnoGhar_Html\assets\images\modelPop\login-logo.png" />
+    <Content Include="AapnoGhar_Html\assets\images\pakages\img1.png" />
+    <Content Include="AapnoGhar_Html\assets\images\pakages\img2.png" />
+    <Content Include="AapnoGhar_Html\assets\images\pakages\img3.png" />
+    <Content Include="AapnoGhar_Html\assets\images\pakages\img4.png" />
+    <Content Include="AapnoGhar_Html\assets\images\pakages\img5.png" />
+    <Content Include="AapnoGhar_Html\assets\images\pakages\right-red.png" />
+    <Content Include="AapnoGhar_Html\assets\images\pakages\room-pakages\img1.png" />
+    <Content Include="AapnoGhar_Html\assets\images\pakages\room-pakages\img2.png" />
+    <Content Include="AapnoGhar_Html\assets\images\pinmn.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\banner.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\room\banner1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\room\beach.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\bed.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\Dlx1.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\Dlx2.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\img1.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\room\img2.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\room\img3.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\room\img4.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\room\img5.jpg" />
+    <Content Include="AapnoGhar_Html\assets\images\room\logo.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\maximumOccoumpany.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\r1.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\r2.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\r3.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\scale-up.png" />
+    <Content Include="AapnoGhar_Html\assets\images\room\wifi.png" />
+    <Content Include="AapnoGhar_Html\assets\js\book-amusement-park.js" />
+    <Content Include="AapnoGhar_Html\assets\js\jquery-min.js" />
+    <Content Include="AapnoGhar_Html\assets\js\jquery-ui.min.js" />
+    <Content Include="AapnoGhar_Html\assets\js\jquery.fancybox.js" />
+    <Content Include="AapnoGhar_Html\assets\js\main.js" />
+    <Content Include="AapnoGhar_Html\assets\js\map.js" />
+    <Content Include="AapnoGhar_Html\assets\js\owl.carousel.min.js" />
+    <Content Include="AapnoGhar_Html\assets\js\roomHandler.js" />
+    <Content Include="AapnoGhar_Html\assets\sass\style.css" />
+    <Content Include="AapnoGhar_Html\assets\video\eat-drink.mp4" />
+    <Content Include="AapnoGhar_Html\assets\video\hotel.mp4" />
+    <Content Include="AapnoGhar_Html\assets\video\video1.mp4" />
+    <Content Include="AapnoGhar_Html\blog-detail.html" />
+    <Content Include="AapnoGhar_Html\Blogs.html" />
+    <Content Include="AapnoGhar_Html\book-room.html" />
+    <Content Include="AapnoGhar_Html\career.html" />
+    <Content Include="AapnoGhar_Html\contact.html" />
+    <Content Include="AapnoGhar_Html\dashboard.html" />
+    <Content Include="AapnoGhar_Html\eat-and-drink.html" />
+    <Content Include="AapnoGhar_Html\gallery.html" />
+    <Content Include="AapnoGhar_Html\Guest-details.html" />
+    <Content Include="AapnoGhar_Html\index.html" />
+    <Content Include="AapnoGhar_Html\mehndi-haldi-function.html" />
+    <Content Include="AapnoGhar_Html\my-activities.html" />
+    <Content Include="AapnoGhar_Html\my-profile.html" />
+    <Content Include="AapnoGhar_Html\my-rooms.html" />
+    <Content Include="AapnoGhar_Html\Packages.html" />
+    <Content Include="AapnoGhar_Html\privacy-policy.html" />
+    <Content Include="AapnoGhar_Html\room-details.html" />
+    <Content Include="AapnoGhar_Html\room-listing.html" />
+    <Content Include="AapnoGhar_Html\room-pakages.html" />
+    <Content Include="AapnoGhar_Html\something_wrong.html" />
+    <Content Include="AapnoGhar_Html\terms-and-conditions.html" />
+    <Content Include="AapnoGhar_Html\thankyou.html" />
+    <Content Include="AboutUs.aspx" />
+    <Content Include="assets\css\fancy-box.css" />
+    <Content Include="assets\css\jquery-ui.min.css" />
+    <Content Include="assets\css\owl.carousel.min.css" />
+    <Content Include="assets\font\font.css" />
+    <Content Include="assets\icons\air-conditioner.png" />
+    <Content Include="assets\icons\Apnoghar_logo_text.png" />
+    <Content Include="assets\icons\attach.png" />
+    <Content Include="assets\icons\avatar.png" />
+    <Content Include="assets\icons\bathroom.png" />
+    <Content Include="assets\icons\bed.png" />
+    <Content Include="assets\icons\calendar.png" />
+    <Content Include="assets\icons\check_iocnswn.png" />
+    <Content Include="assets\icons\chec_s.png" />
+    <Content Include="assets\icons\close.png" />
+    <Content Include="assets\icons\cont_call.png" />
+    <Content Include="assets\icons\cont_msg.png" />
+    <Content Include="assets\icons\cont_wtsp.png" />
+    <Content Include="assets\icons\delete.png" />
+    <Content Include="assets\icons\donw.png" />
+    <Content Include="assets\icons\downrd.png" />
+    <Content Include="assets\icons\down_ar.png" />
+    <Content Include="assets\icons\footer_ico1.png" />
+    <Content Include="assets\icons\footer_ico2.png" />
+    <Content Include="assets\icons\footer_ico3.png" />
+    <Content Include="assets\icons\footer_ico4.png" />
+    <Content Include="assets\icons\footer_ico5.png" />
+    <Content Include="assets\icons\footer_logo.png" />
+    <Content Include="assets\icons\heading_line.png" />
+    <Content Include="assets\icons\heading_line_skyblue.png" />
+    <Content Include="assets\icons\heading_line_white.png" />
+    <Content Include="assets\icons\head_ico1.png" />
+    <Content Include="assets\icons\head_ico2.png" />
+    <Content Include="assets\icons\head_ico3.png" />
+    <Content Include="assets\icons\head_ico4.png" />
+    <Content Include="assets\icons\head_ico5.png" />
+    <Content Include="assets\icons\hrt_ico.png" />
+    <Content Include="assets\icons\joker.png" />
+    <Content Include="assets\icons\kid_ico.png" />
+    <Content Include="assets\icons\left.png" />
+    <Content Include="assets\icons\left_black.png" />
+    <Content Include="assets\icons\le_arr.png" />
+    <Content Include="assets\icons\Loader-BIG.gif" />
+    <Content Include="assets\icons\Loader-BIG_.gif" />
+    <Content Include="assets\icons\loc.png" />
+    <Content Include="assets\icons\logo.png" />
+    <Content Include="assets\icons\logout.png" />
+    <Content Include="assets\icons\mail.png" />
+    <Content Include="assets\icons\mic_ico.png" />
+    <Content Include="assets\icons\nextBl.png" />
+    <Content Include="assets\icons\nextBr.png" />
+    <Content Include="assets\icons\nextbro.png" />
+    <Content Include="assets\icons\nextgr.png" />
+    <Content Include="assets\icons\nextW.png" />
+    <Content Include="assets\icons\ox.png" />
+    <Content Include="assets\icons\parents_ico.png" />
+    <Content Include="assets\icons\pen.png" />
+    <Content Include="assets\icons\phone.png" />
+    <Content Include="assets\icons\play.png" />
+    <Content Include="assets\icons\prewW.png" />
+    <Content Include="assets\icons\right.png" />
+    <Content Include="assets\icons\right_black.png" />
+    <Content Include="assets\icons\select-arr.png" />
+    <Content Include="assets\icons\testi_ico.png" />
+    <Content Include="assets\icons\tik.png" />
+    <Content Include="assets\icons\tray.png" />
+    <Content Include="assets\icons\user.png" />
+    <Content Include="assets\icons\venues_ico.png" />
+    <Content Include="assets\icons\whatsapp.png" />
+    <Content Include="assets\icons\wifi.png" />
+    <Content Include="assets\images\about-us\banner.jpg" />
+    <Content Include="assets\images\about-us\img1.jpg" />
+    <Content Include="assets\images\about-us\img2.jpg" />
+    <Content Include="assets\images\about-us\img3.jpg" />
+    <Content Include="assets\images\about-us\img4.jpg" />
+    <Content Include="assets\images\amusement-park\Activities\img1.jpg" />
+    <Content Include="assets\images\amusement-park\Activities\img2.jpg" />
+    <Content Include="assets\images\amusement-park\Activities\img3.jpg" />
+    <Content Include="assets\images\amusement-park\bannerimg1.jpg" />
+    <Content Include="assets\images\amusement-park\bannerimg2.jpg" />
+    <Content Include="assets\images\amusement-park\bannerimg3.jpg" />
+    <Content Include="assets\images\amusement-park\food\img1.jpg" />
+    <Content Include="assets\images\amusement-park\More-services\img1.jpg" />
+    <Content Include="assets\images\amusement-park\More-services\img2.jpg" />
+    <Content Include="assets\images\amusement-park\More-services\img3.jpg" />
+    <Content Include="assets\images\amusement-park\testimonial\img1.jpg" />
+    <Content Include="assets\images\amusement-park\testimonial\img2.jpg" />
+    <Content Include="assets\images\amusement-park\testimonial\img3.jpg" />
+    <Content Include="assets\images\Blogs\Blog-detail\banner.jpg" />
+    <Content Include="assets\images\Blogs\Blog-detail\img1.jpg" />
+    <Content Include="assets\images\Blogs\Blog-detail\img2.jpg" />
+    <Content Include="assets\images\Blogs\Blog-detail\IMG3.jpg" />
+    <Content Include="assets\images\Blogs\img1.jpg" />
+    <Content Include="assets\images\Blogs\img2.jpg" />
+    <Content Include="assets\images\Blogs\img3.jpg" />
+    <Content Include="assets\images\Blogs\img4.jpg" />
+    <Content Include="assets\images\Blogs\img5.jpg" />
+    <Content Include="assets\images\Blogs\img6.jpg" />
+    <Content Include="assets\images\Blogs\img7.jpg" />
+    <Content Include="assets\images\Blogs\img8.jpg" />
+    <Content Include="assets\images\career\banner.jpg" />
+    <Content Include="assets\images\career\culture.png" />
+    <Content Include="assets\images\career\leadership.png" />
+    <Content Include="assets\images\career\role.png" />
+    <Content Include="assets\images\Contact\banner.jpg" />
+    <Content Include="assets\images\dashboard\banner.jpg" />
+    <Content Include="assets\images\dashboard\bg1.jpg" />
+    <Content Include="assets\images\dashboard\events.jpg" />
+    <Content Include="assets\images\dashboard\img1.jpg" />
+    <Content Include="assets\images\dashboard\img2.jpg" />
+    <Content Include="assets\images\dashboard\plans.jpg" />
+    <Content Include="assets\images\dashboard\room.jpg" />
+    <Content Include="assets\images\dashboard\room_thumb.jpg" />
+    <Content Include="assets\images\eat-drink\1.jpg" />
+    <Content Include="assets\images\eat-drink\2.jpg" />
+    <Content Include="assets\images\eat-drink\3.jpg" />
+    <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\Gallery\img1.png" />
+    <Content Include="assets\images\Gallery\img2.png" />
+    <Content Include="assets\images\Gallery\img3.png" />
+    <Content Include="assets\images\Gallery\img4.png" />
+    <Content Include="assets\images\Gallery\img5.png" />
+    <Content Include="assets\images\Gallery\img6.png" />
+    <Content Include="assets\images\Gallery\img7.png" />
+    <Content Include="assets\images\Gallery\img8.png" />
+    <Content Include="assets\images\Gallery\img9.png" />
+    <Content Include="assets\images\Gallery\slideimg1.jpg" />
+    <Content Include="assets\images\Gallery\slideimg2.jpg" />
+    <Content Include="assets\images\Gallery\slideimg3.jpg" />
+    <Content Include="assets\images\Gallery\slideimg4.jpg" />
+    <Content Include="assets\images\header\cele_img1.jpg" />
+    <Content Include="assets\images\header\cele_img2.jpg" />
+    <Content Include="assets\images\header\cele_img3.jpg" />
+    <Content Include="assets\images\header\cele_img4.jpg" />
+    <Content Include="assets\images\header\stay_img1.jpg" />
+    <Content Include="assets\images\header\stay_img2.jpg" />
+    <Content Include="assets\images\header\stay_img3.jpg" />
+    <Content Include="assets\images\home\img1.jpg" />
+    <Content Include="assets\images\home\img2.jpg" />
+    <Content Include="assets\images\home\img3.jpg" />
+    <Content Include="assets\images\home\img4.jpg" />
+    <Content Include="assets\images\home\seca-1.jpg" />
+    <Content Include="assets\images\home\seca-2.jpg" />
+    <Content Include="assets\images\home\seca-3.jpg" />
+    <Content Include="assets\images\home\seca-4.jpg" />
+    <Content Include="assets\images\home\secC_banner.jpg" />
+    <Content Include="assets\images\home\secC_ico.png" />
+    <Content Include="assets\images\home\secD_img1.png" />
+    <Content Include="assets\images\home\secD_img2.png" />
+    <Content Include="assets\images\home\secD_img3.png" />
+    <Content Include="assets\images\home\SecE-img1.jpg" />
+    <Content Include="assets\images\home\SecE-img2.jpg" />
+    <Content Include="assets\images\home\SecE-img3.jpg" />
+    <Content Include="assets\images\home\testimonial\img1.png" />
+    <Content Include="assets\images\home\testimonial\img2.png" />
+    <Content Include="assets\images\home\testimonial\img3.png" />
+    <Content Include="assets\images\home\testimonial\img4.png" />
+    <Content Include="assets\images\home\testimonial\img5.png" />
+    <Content Include="assets\images\home\testimonial\img6.png" />
+    <Content Include="assets\images\Mehndi-haldi\banner.jpg" />
+    <Content Include="assets\images\Mehndi-haldi\gallery\img1.jpg" />
+    <Content Include="assets\images\Mehndi-haldi\gallery\img2.jpg" />
+    <Content Include="assets\images\Mehndi-haldi\gallery\img3.jpg" />
+    <Content Include="assets\images\Mehndi-haldi\next.png" />
+    <Content Include="assets\images\Mehndi-haldi\prev.png" />
+    <Content Include="assets\images\Mehndi-haldi\slideimg1.jpg" />
+    <Content Include="assets\images\Mehndi-haldi\slideimg2.jpg" />
+    <Content Include="assets\images\Mehndi-haldi\slideimg3.jpg" />
+    <Content Include="assets\images\modelPop\fb.png" />
+    <Content Include="assets\images\modelPop\ggl.png" />
+    <Content Include="assets\images\modelPop\login-logo.png" />
+    <Content Include="assets\images\pakages\img1.png" />
+    <Content Include="assets\images\pakages\img2.png" />
+    <Content Include="assets\images\pakages\img3.png" />
+    <Content Include="assets\images\pakages\img4.png" />
+    <Content Include="assets\images\pakages\img5.png" />
+    <Content Include="assets\images\pakages\right-red.png" />
+    <Content Include="assets\images\pakages\room-pakages\img1.png" />
+    <Content Include="assets\images\pakages\room-pakages\img2.png" />
+    <Content Include="assets\images\pinmn.png" />
+    <Content Include="assets\images\room\banner.jpg" />
+    <Content Include="assets\images\room\banner1.jpg" />
+    <Content Include="assets\images\room\beach.png" />
+    <Content Include="assets\images\room\bed.png" />
+    <Content Include="assets\images\room\Dlx1.png" />
+    <Content Include="assets\images\room\Dlx2.png" />
+    <Content Include="assets\images\room\img1.jpg" />
+    <Content Include="assets\images\room\img2.jpg" />
+    <Content Include="assets\images\room\img3.jpg" />
+    <Content Include="assets\images\room\img4.jpg" />
+    <Content Include="assets\images\room\img5.jpg" />
+    <Content Include="assets\images\room\logo.png" />
+    <Content Include="assets\images\room\maximumOccoumpany.png" />
+    <Content Include="assets\images\room\r1.png" />
+    <Content Include="assets\images\room\r2.png" />
+    <Content Include="assets\images\room\r3.png" />
+    <Content Include="assets\images\room\scale-up.png" />
+    <Content Include="assets\images\room\wifi.png" />
+    <Content Include="assets\js\book-amusement-park.js" />
+    <Content Include="assets\js\jquery-min.js" />
+    <Content Include="assets\js\jquery-ui.min.js" />
+    <Content Include="assets\js\jquery.fancybox.js" />
+    <Content Include="assets\js\main-Old.js" />
+    <Content Include="assets\js\map.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
+    <Content Include="assets\js\roomHandlerOld.js" />
+    <Content Include="assets\sass\style.css" />
+    <Content Include="assets\video\eat-drink.mp4" />
+    <Content Include="assets\video\hotel.mp4" />
+    <Content Include="assets\video\eat-and-drink.mp4" />
+    <Content Include="assets\video\video1.mp4" />
+    <Content Include="Blog.aspx" />
+    <Content Include="BlogDetail.aspx" />
+    <Content Include="CareerFront.aspx" />
+    <Content Include="CCAVRequestHandler.aspx" />
+    <Content Include="CCAVResponseHandler.aspx" />
+    <Content Include="CCAVTransactionFailed.aspx" />
+    <Content Include="CMSPageDetail.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="EatAndDrink.aspx" />
+    <Content Include="EntertainmentDetails.aspx" />
+    <Content Include="Gallery.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
+    <Content Include="MeetAndCelebrateDetail.aspx" />
+    <Content Include="MeetAndCelebrateListing.aspx" />
+    <Content Include="Packages.aspx" />
+    <Content Include="PrivacyPolicy.aspx" />
+    <Content Include="RoomDetails.aspx" />
+    <Content Include="RoomPackages.aspx" />
+    <Content Include="RoomListing.aspx" />
+    <Content Include="RoomBooking.aspx" />
+    <Content Include="RoomBookingGuestDetail.aspx" />
+    <Content Include="SomethingWentWrong.aspx" />
+    <Content Include="TermsAndConditions.aspx" />
+    <Content Include="ThankYou.aspx" />
+    <Content Include="UserDashboard.aspx" />
+    <Content Include="UserDashboardActivities.aspx" />
+    <Content Include="UserDashboardLogOut.aspx" />
+    <Content Include="UserDashboardProfile.aspx" />
+    <Content Include="UserDashboardRoomAndSuits.aspx" />
+    <Content Include="UserDashboardUserControl.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AapnoGharAdmin\AddUpdAmenities.aspx.cs">
+      <DependentUpon>AddUpdAmenities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdAmenities.aspx.designer.cs">
+      <DependentUpon>AddUpdAmenities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdBlogCategory.aspx.cs">
+      <DependentUpon>AddUpdBlogCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdBlogCategory.aspx.designer.cs">
+      <DependentUpon>AddUpdBlogCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdBlogData.aspx.cs">
+      <DependentUpon>AddUpdBlogData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdBlogData.aspx.designer.cs">
+      <DependentUpon>AddUpdBlogData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdCMSData.aspx.cs">
+      <DependentUpon>AddUpdCMSData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdCMSData.aspx.designer.cs">
+      <DependentUpon>AddUpdCMSData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdCouponsData.aspx.cs">
+      <DependentUpon>AddUpdCouponsData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdCouponsData.aspx.designer.cs">
+      <DependentUpon>AddUpdCouponsData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdCustomer.aspx.cs">
+      <DependentUpon>AddUpdCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdCustomer.aspx.designer.cs">
+      <DependentUpon>AddUpdCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdEatAndDrinkData.aspx.cs">
+      <DependentUpon>AddUpdEatAndDrinkData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdEatAndDrinkData.aspx.designer.cs">
+      <DependentUpon>AddUpdEatAndDrinkData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdEntertainmentActivityData.aspx.cs">
+      <DependentUpon>AddUpdEntertainmentActivityData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdEntertainmentActivityData.aspx.designer.cs">
+      <DependentUpon>AddUpdEntertainmentActivityData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdEntertainmentData.aspx.cs">
+      <DependentUpon>AddUpdEntertainmentData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdEntertainmentData.aspx.designer.cs">
+      <DependentUpon>AddUpdEntertainmentData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdEntertainmentMealData.aspx.cs">
+      <DependentUpon>AddUpdEntertainmentMealData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdEntertainmentMealData.aspx.designer.cs">
+      <DependentUpon>AddUpdEntertainmentMealData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdFestivalChargesData.aspx.cs">
+      <DependentUpon>AddUpdFestivalChargesData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdFestivalChargesData.aspx.designer.cs">
+      <DependentUpon>AddUpdFestivalChargesData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdJobCategory.aspx.cs">
+      <DependentUpon>AddUpdJobCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdJobCategory.aspx.designer.cs">
+      <DependentUpon>AddUpdJobCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdPackage.aspx.cs">
+      <DependentUpon>AddUpdPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdPackage.aspx.designer.cs">
+      <DependentUpon>AddUpdPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdPhotoCategory.aspx.cs">
+      <DependentUpon>AddUpdPhotoCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdPhotoCategory.aspx.designer.cs">
+      <DependentUpon>AddUpdPhotoCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdPhotoData.aspx.cs">
+      <DependentUpon>AddUpdPhotoData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdPhotoData.aspx.designer.cs">
+      <DependentUpon>AddUpdPhotoData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdRoomData.aspx.cs">
+      <DependentUpon>AddUpdRoomData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdRoomData.aspx.designer.cs">
+      <DependentUpon>AddUpdRoomData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdVideoData.aspx.cs">
+      <DependentUpon>AddUpdVideoData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdVideoData.aspx.designer.cs">
+      <DependentUpon>AddUpdVideoData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdWeddeingEventData.aspx.cs">
+      <DependentUpon>AddUpdWeddeingEventData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\AddUpdWeddeingEventData.aspx.designer.cs">
+      <DependentUpon>AddUpdWeddeingEventData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\HeaderRight.ascx.cs">
+      <DependentUpon>HeaderRight.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\HeaderRight.ascx.designer.cs">
+      <DependentUpon>HeaderRight.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageAmenities.aspx.cs">
+      <DependentUpon>ManageAmenities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageAmenities.aspx.designer.cs">
+      <DependentUpon>ManageAmenities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageBlogCategory.aspx.cs">
+      <DependentUpon>ManageBlogCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageBlogCategory.aspx.designer.cs">
+      <DependentUpon>ManageBlogCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageBlogData.aspx.cs">
+      <DependentUpon>ManageBlogData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageBlogData.aspx.designer.cs">
+      <DependentUpon>ManageBlogData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCareer.aspx.cs">
+      <DependentUpon>ManageCareer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCareer.aspx.designer.cs">
+      <DependentUpon>ManageCareer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCMSData.aspx.cs">
+      <DependentUpon>ManageCMSData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCMSData.aspx.designer.cs">
+      <DependentUpon>ManageCMSData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCMSEnquiryData.aspx.cs">
+      <DependentUpon>ManageCMSEnquiryData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCMSEnquiryData.aspx.designer.cs">
+      <DependentUpon>ManageCMSEnquiryData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCMSGalleryData.aspx.cs">
+      <DependentUpon>ManageCMSGalleryData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCMSGalleryData.aspx.designer.cs">
+      <DependentUpon>ManageCMSGalleryData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageContact.aspx.cs">
+      <DependentUpon>ManageContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageContact.aspx.designer.cs">
+      <DependentUpon>ManageContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCouponsData.aspx.cs">
+      <DependentUpon>ManageCouponsData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCouponsData.aspx.designer.cs">
+      <DependentUpon>ManageCouponsData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCustomer.aspx.cs">
+      <DependentUpon>ManageCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageCustomer.aspx.designer.cs">
+      <DependentUpon>ManageCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEatAndDrinkData.aspx.cs">
+      <DependentUpon>ManageEatAndDrinkData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEatAndDrinkData.aspx.designer.cs">
+      <DependentUpon>ManageEatAndDrinkData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEatAndDrinkEnquiryData.aspx.cs">
+      <DependentUpon>ManageEatAndDrinkEnquiryData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEatAndDrinkEnquiryData.aspx.designer.cs">
+      <DependentUpon>ManageEatAndDrinkEnquiryData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEatAndDrinkGalleryData.aspx.cs">
+      <DependentUpon>ManageEatAndDrinkGalleryData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEatAndDrinkGalleryData.aspx.designer.cs">
+      <DependentUpon>ManageEatAndDrinkGalleryData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentActivityData.aspx.cs">
+      <DependentUpon>ManageEntertainmentActivityData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentActivityData.aspx.designer.cs">
+      <DependentUpon>ManageEntertainmentActivityData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentData.aspx.cs">
+      <DependentUpon>ManageEntertainmentData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentData.aspx.designer.cs">
+      <DependentUpon>ManageEntertainmentData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentGalleryData.aspx.cs">
+      <DependentUpon>ManageEntertainmentGalleryData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentGalleryData.aspx.designer.cs">
+      <DependentUpon>ManageEntertainmentGalleryData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentMealData.aspx.cs">
+      <DependentUpon>ManageEntertainmentMealData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentMealData.aspx.designer.cs">
+      <DependentUpon>ManageEntertainmentMealData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentBookOrder.aspx.cs">
+      <DependentUpon>ManageEntertainmentBookOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageEntertainmentBookOrder.aspx.designer.cs">
+      <DependentUpon>ManageEntertainmentBookOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageFestivalChargesData.aspx.cs">
+      <DependentUpon>ManageFestivalChargesData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageFestivalChargesData.aspx.designer.cs">
+      <DependentUpon>ManageFestivalChargesData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageJobCategory.aspx.cs">
+      <DependentUpon>ManageJobCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageJobCategory.aspx.designer.cs">
+      <DependentUpon>ManageJobCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageOrder.aspx.cs">
+      <DependentUpon>ManageOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageOrder.aspx.designer.cs">
+      <DependentUpon>ManageOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManagePackage.aspx.cs">
+      <DependentUpon>ManagePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManagePackage.aspx.designer.cs">
+      <DependentUpon>ManagePackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManagePhotoCategory.aspx.cs">
+      <DependentUpon>ManagePhotoCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManagePhotoCategory.aspx.designer.cs">
+      <DependentUpon>ManagePhotoCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManagePhotoData.aspx.cs">
+      <DependentUpon>ManagePhotoData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManagePhotoData.aspx.designer.cs">
+      <DependentUpon>ManagePhotoData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageRoomAvailability.aspx.cs">
+      <DependentUpon>ManageRoomAvailability.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageRoomAvailability.aspx.designer.cs">
+      <DependentUpon>ManageRoomAvailability.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageRoomData.aspx.cs">
+      <DependentUpon>ManageRoomData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageRoomData.aspx.designer.cs">
+      <DependentUpon>ManageRoomData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageRoomGalleryData.aspx.cs">
+      <DependentUpon>ManageRoomGalleryData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageRoomGalleryData.aspx.designer.cs">
+      <DependentUpon>ManageRoomGalleryData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageVideoData.aspx.cs">
+      <DependentUpon>ManageVideoData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageVideoData.aspx.designer.cs">
+      <DependentUpon>ManageVideoData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageWeddeingEventData.aspx.cs">
+      <DependentUpon>ManageWeddeingEventData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageWeddeingEventData.aspx.designer.cs">
+      <DependentUpon>ManageWeddeingEventData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageWeddeingEventDataEnquiry.aspx.cs">
+      <DependentUpon>ManageWeddeingEventDataEnquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageWeddeingEventDataEnquiry.aspx.designer.cs">
+      <DependentUpon>ManageWeddeingEventDataEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageWeddeingEventGalleryData.aspx.cs">
+      <DependentUpon>ManageWeddeingEventGalleryData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ManageWeddeingEventGalleryData.aspx.designer.cs">
+      <DependentUpon>ManageWeddeingEventGalleryData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\popups\insert_hyperlink.aspx.cs">
+      <DependentUpon>insert_hyperlink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\popups\insert_hyperlink.aspx.designer.cs">
+      <DependentUpon>insert_hyperlink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\popups\insert_image.aspx.cs">
+      <DependentUpon>insert_image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\popups\insert_image.aspx.designer.cs">
+      <DependentUpon>insert_image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ViewEntertainmentHistory.aspx.cs">
+      <DependentUpon>ViewEntertainmentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ViewEntertainmentHistory.aspx.designer.cs">
+      <DependentUpon>ViewEntertainmentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ViewOrderHistory.aspx.cs">
+      <DependentUpon>ViewOrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharAdmin\ViewOrderHistory.aspx.designer.cs">
+      <DependentUpon>ViewOrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AapnoGharService.asmx.cs">
+      <DependentUpon>AapnoGharService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AapnoGharWebMaster.Master.cs">
+      <DependentUpon>AapnoGharWebMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AapnoGharWebMaster.Master.designer.cs">
+      <DependentUpon>AapnoGharWebMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog.aspx.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog.aspx.designer.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlogDetail.aspx.cs">
+      <DependentUpon>BlogDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogDetail.aspx.designer.cs">
+      <DependentUpon>BlogDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CareerFront.aspx.cs">
+      <DependentUpon>CareerFront.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CareerFront.aspx.designer.cs">
+      <DependentUpon>CareerFront.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CCAVRequestHandler.aspx.cs">
+      <DependentUpon>CCAVRequestHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CCAVRequestHandler.aspx.designer.cs">
+      <DependentUpon>CCAVRequestHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CCAVResponseHandler.aspx.cs">
+      <DependentUpon>CCAVResponseHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CCAVResponseHandler.aspx.designer.cs">
+      <DependentUpon>CCAVResponseHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CCAVTransactionFailed.aspx.cs">
+      <DependentUpon>CCAVTransactionFailed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CCAVTransactionFailed.aspx.designer.cs">
+      <DependentUpon>CCAVTransactionFailed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSPageDetail.aspx.cs">
+      <DependentUpon>CMSPageDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSPageDetail.aspx.designer.cs">
+      <DependentUpon>CMSPageDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EatAndDrink.aspx.cs">
+      <DependentUpon>EatAndDrink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EatAndDrink.aspx.designer.cs">
+      <DependentUpon>EatAndDrink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EntertainmentDetails.aspx.cs">
+      <DependentUpon>EntertainmentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EntertainmentDetails.aspx.designer.cs">
+      <DependentUpon>EntertainmentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="isOtherCMSPage.cs" />
+    <Compile Include="isOtherEntertainment.cs" />
+    <Compile Include="isOtherisOtherMeetAndCelebrate.cs" />
+    <Compile Include="isOtherRoom.cs" />
+    <Compile Include="MeetAndCelebrateDetail.aspx.cs">
+      <DependentUpon>MeetAndCelebrateDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MeetAndCelebrateDetail.aspx.designer.cs">
+      <DependentUpon>MeetAndCelebrateDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MeetAndCelebrateListing.aspx.cs">
+      <DependentUpon>MeetAndCelebrateListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MeetAndCelebrateListing.aspx.designer.cs">
+      <DependentUpon>MeetAndCelebrateListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Packages.aspx.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Packages.aspx.designer.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoomDetails.aspx.cs">
+      <DependentUpon>RoomDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoomDetails.aspx.designer.cs">
+      <DependentUpon>RoomDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoomPackages.aspx.cs">
+      <DependentUpon>RoomPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoomPackages.aspx.designer.cs">
+      <DependentUpon>RoomPackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoomListing.aspx.cs">
+      <DependentUpon>RoomListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoomListing.aspx.designer.cs">
+      <DependentUpon>RoomListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoomBooking.aspx.cs">
+      <DependentUpon>RoomBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoomBooking.aspx.designer.cs">
+      <DependentUpon>RoomBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoomBookingGuestDetail.aspx.cs">
+      <DependentUpon>RoomBookingGuestDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoomBookingGuestDetail.aspx.designer.cs">
+      <DependentUpon>RoomBookingGuestDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SomethingWentWrong.aspx.cs">
+      <DependentUpon>SomethingWentWrong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SomethingWentWrong.aspx.designer.cs">
+      <DependentUpon>SomethingWentWrong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TermsAndConditions.aspx.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermsAndConditions.aspx.designer.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThankYou.aspx.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThankYou.aspx.designer.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.designer.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboardActivities.aspx.cs">
+      <DependentUpon>UserDashboardActivities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboardActivities.aspx.designer.cs">
+      <DependentUpon>UserDashboardActivities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboardLogOut.aspx.cs">
+      <DependentUpon>UserDashboardLogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboardLogOut.aspx.designer.cs">
+      <DependentUpon>UserDashboardLogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboardProfile.aspx.cs">
+      <DependentUpon>UserDashboardProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboardProfile.aspx.designer.cs">
+      <DependentUpon>UserDashboardProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboardRoomAndSuits.aspx.cs">
+      <DependentUpon>UserDashboardRoomAndSuits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboardRoomAndSuits.aspx.designer.cs">
+      <DependentUpon>UserDashboardRoomAndSuits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboardUserControl.ascx.cs">
+      <DependentUpon>UserDashboardUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboardUserControl.ascx.designer.cs">
+      <DependentUpon>UserDashboardUserControl.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Component\Component.csproj">
+      <Project>{c98b8e5e-d580-49d5-9876-b4a83695aac5}</Project>
+      <Name>Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{b6778bb4-aebb-4ef9-bd77-f0078c4e9a18}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AapnoGharlmages\ActivityImage\" />
+    <Folder Include="AapnoGharlmages\AmenitiesImage\" />
+    <Folder Include="AapnoGharlmages\BlogImage\" />
+    <Folder Include="AapnoGharlmages\EatAndDrinkImages\" />
+    <Folder Include="AapnoGharlmages\EntertainmentImages\" />
+    <Folder Include="AapnoGharlmages\GalleryImage\" />
+    <Folder Include="AapnoGharlmages\MealImage\" />
+    <Folder Include="AapnoGharlmages\PackageImages\" />
+    <Folder Include="AapnoGharlmages\PackageInvoice\" />
+    <Folder Include="AapnoGharlmages\PageImages\" />
+    <Folder Include="AapnoGharlmages\PhotoImage\" />
+    <Folder Include="AapnoGharlmages\Resume\" />
+    <Folder Include="AapnoGharlmages\RoomImages\" />
+    <Folder Include="AapnoGharlmages\RoomInvoice\" />
+    <Folder Include="AapnoGharlmages\VideoGallery\" />
+    <Folder Include="AapnoGharlmages\WeddeingEventImages\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1997</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1997/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
