@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C98B8E5E-D580-49D5-9876-B4A83695AAC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Component</RootNamespace>
+    <AssemblyName>Component</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Selectors" />
+    <Reference Include="System.identitymodel.services" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLogin.cs" />
+    <Compile Include="AmenitiesData.cs" />
+    <Compile Include="BlogCategory.cs" />
+    <Compile Include="BlogData.cs" />
+    <Compile Include="CareerJob.cs" />
+    <Compile Include="CMSData.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="CouponData.cs" />
+    <Compile Include="CustomerData.cs" />
+    <Compile Include="CustomerOrder.cs" />
+    <Compile Include="CustomerOrderHistory.cs" />
+    <Compile Include="EatAndDrinkData.cs" />
+    <Compile Include="EntertainmentPackagePriceData.cs" />
+    <Compile Include="EntertainmentBookData.cs" />
+    <Compile Include="EntertainmentBookHistory.cs" />
+    <Compile Include="EntertainmentBookingAttendeesData.cs" />
+    <Compile Include="FestivalChargesData.cs" />
+    <Compile Include="JobCategory.cs" />
+    <Compile Include="Mail.cs" />
+    <Compile Include="PackageData.cs" />
+    <Compile Include="PhotoCategory.cs" />
+    <Compile Include="PhotoData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoomAddOn.cs" />
+    <Compile Include="RoomAmenitiesData.cs" />
+    <Compile Include="RoomBookData.cs" />
+    <Compile Include="RoomData.cs" />
+    <Compile Include="GalleryData.cs" />
+    <Compile Include="RoomEntertainmentData.cs" />
+    <Compile Include="RoomPrice.cs" />
+    <Compile Include="EntertainmentActivityData.cs" />
+    <Compile Include="EntertainmentData.cs" />
+    <Compile Include="EntertainmentMealData.cs" />
+    <Compile Include="EntertainmentMealItemsData.cs" />
+    <Compile Include="VideoGalleryData.cs" />
+    <Compile Include="WeddeingEventData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{b6778bb4-aebb-4ef9-bd77-f0078c4e9a18}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
